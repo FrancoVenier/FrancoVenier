@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: colectivos-cordoba
+    runtime: node
+    plan: starter        # los discos persistentes requieren plan pago; con "free" las puntuaciones se pierden al reiniciar
+    buildCommand: "true"
+    startCommand: npm start
+    envVars:
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: datos
+      mountPath: /var/data
+      sizeGB: 1
