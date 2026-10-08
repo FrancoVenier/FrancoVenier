@@ -1,0 +1,8 @@
+{
+  "name": "colectivos-cordoba",
+  "version": "1.0.0",
+  "description": "Mapa de recorridos de colectivos de Córdoba Capital con puntuación y fotos",
+  "type": "module",
+  "scripts": { "start": "node server.js", "test": "node --test" },
+  "engines": { "node": ">=18" }
+}

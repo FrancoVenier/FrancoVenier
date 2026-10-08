@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colectivos Córdoba</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside id="side">
+  <header>
+    <h1>🚌 Colectivos Córdoba</h1>
+    <input id="search" type="search" placeholder="Buscar línea (ej: 10, A, Coniferal)…" autocomplete="off">
+  </header>
+  <div id="status" role="status"></div>
+  <ul id="routes"></ul>
+</aside>
+<main>
+  <div id="map"></div>
+  <section id="detail" hidden>
+    <button id="close" aria-label="Cerrar">×</button>
+    <h2 id="d-title"></h2>
+    <p id="d-sub" class="muted"></p>
+    <div id="d-avg" class="avg"></div>
+
+    <form id="form">
+      <h3>Puntuá este colectivo</h3>
+      <div id="scale" role="radiogroup" aria-label="Puntuación de 1 a 6"></div>
+      <div id="scale-label" class="muted"></div>
+      <input name="author" maxlength="40" placeholder="Tu nombre (opcional)">
+      <textarea name="comment" maxlength="500" rows="3" placeholder="Comentario (limpieza, frecuencia, trato del chofer…)"></textarea>
+      <label class="file">📷 Agregar fotos (máx. 3)
+        <input id="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
+      </label>
+      <div id="previews"></div>
+      <button type="submit" id="submit">Enviar puntuación</button>
+      <div id="form-msg" class="muted"></div>
+    </form>
+
+    <h3>Opiniones</h3>
+    <div id="reviews"></div>
+  </section>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js" type="module"></script>
+</body>
+</html>
